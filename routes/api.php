@@ -26,6 +26,8 @@ Route::middleware(['auth:sanctum', 'admin'])->group(function () {
 
     Route::apiResource('products', ProductController::class);
     Route::apiResource('users', UserController::class);
+    Route::apiResource('products', ProductController::class);
+    Route::apiResource('users', UserController::class);
     Route::apiResource('customers', CustomerController::class);
     Route::apiResource('categories', CategoryController::class)->except('show');
     Route::get('/categories/tree', [CategoryController::class, 'getAsTree']);
